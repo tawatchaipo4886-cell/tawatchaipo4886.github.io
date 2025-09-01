@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รักเราคือ…</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffdee9, #b5fffc);
+      font-family: 'Kanit', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 80px;
+    }
+    h1 { font-size: 3em; margin-bottom: 20px; }
+    button {
+      padding: 12px 24px;
+      font-size: 1.2em;
+      background: #ff6f91;
+      border: none;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #ff3c72; }
+    .heart { font-size: 4em; animation: heartbeat 1s infinite; margin-bottom: 30px; }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.4); }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart">❤️</div>
+  <h1>ถึงเธอเค้ามีอะไรอยากบอก</h1>
+  <p>สิ่งที่เราอยากบอก</p>
+  <button onclick="location.href='love.html'">ลองกดไปนะ</button>
+</body>
+</html>
+

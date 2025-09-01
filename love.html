@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ถึงคนที่เรารักที่สุด 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Kanit', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #ff6f91;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff3c72;
+    }
+
+    .heart {
+      font-size: 3em;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>เข้ามาถึงหน้านี้แล้วสินะ💕</h1>
+  <div class="heart">❤️</div>
+
+  <p id="message">มีอะไรจะบอกน้า... 🥺</p>
+
+  <button onclick="showLove()">คลิกตรงนี้สิจ๊ะ</button>
+  <p>เพลงของเรา…เพราะเหมือนหัวใจเรา</p>
+  <button onclick="location.href='music.html'">ฟังเพลงเลย</button>
+  <script>
+    function showLove() {
+      const msg = "รักนะรักสุดในโลกเลยนะ! ขอบคุณที่อยู่ด้วยกัน เค้าจะรักตัวเองตลอดไป 💖";
+      let i = 0;
+      const speed = 50;
+      const messageEl = document.getElementById("message");
+      messageEl.innerHTML = "";
+
+      function typeWriter() {
+        if (i < msg.length) {
+          messageEl.innerHTML += msg.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      typeWriter();
+    }
+ 
+  </script>
+</body>
+</html>

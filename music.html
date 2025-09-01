@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เพลงรักของเรา</title>
+  <style>
+    body {
+      background: #fffbea;
+      font-family: 'Kanit', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 60px;
+    }
+    iframe { border: none; margin-top: 20px; }
+    #lyrics {
+      font-size: 1.5em;
+      margin: 30px auto;
+      max-width: 600px;
+      white-space: pre-wrap;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 25px;
+      background: #6f99ff;
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    a.button:hover { background: #3c72ff; }
+  </style>
+</head>
+<body>
+  <h1>ซูลูปาก้า ตาปาเฮ้</h1>
+ <!-- ใช้ audio tag -->
+  <audio controls autoplay loop>
+    <source src="ซูลูปาก้า ตาปาเฮ้.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 🎵 วิดีโอ YouTube พร้อม autoplay -->
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/FHFtDqZbL18?autoplay=1&mute=0&loop=1&playlist=FHFtDqZbL18"
+    title="Zulupaka Tapahey"
+    allow="autoplay; encrypted-media"
+    allowfullscreen></iframe>
+
+  <!-- 💬 เนื้อเพลงพิมพ์ทีละตัว -->
+  <p id="lyrics"></p>
+
+  <!-- 🔁 กลับหน้าแรก -->
+  <a class="button" href="index.html">กลับไปหน้าแรก</a>
+
+  <script>
+    const text = "ฉันไม่เคยที่จะหายไป… คิดถึงเพียงแต่เธอรู้ไหม… ซูลูปาก้า ตาปาเฮ้~ 💖";
+    let i = 0;
+    const speed = 60;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("lyrics").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
